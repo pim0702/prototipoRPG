@@ -1,0 +1,109 @@
+#include <iostream>
+#include <vector>
+#include <time.h>
+
+// Arma – Que deverá ter dano mínimo e dano máximo
+struct Arma {
+    int danoMinimo = 2;
+    int danoMaximo = 25;
+	string nome;
+};
+
+// Inimigo – Que deverá ter um nome, vida, e uma arma.
+struct Inimigo {
+    Arma aleatoria2;
+    string nome;
+    int vida = 100;
+};
+
+// Jogador – Que deverá ter um nível, vida e uma arma.
+struct Jogador {
+	Arma aleatoria1;
+	int nivel;
+	int vida = 100;
+};
+
+// Fase – Que deverá ter um nome e 5 inimigos.
+struct Fase {
+    Inimigo Jose, Amilton, Juninnnn, Rodolfo, Cesar;
+    string nome;
+};
+
+int maior(int n1, int n2) 
+{
+	if(n1 > n2)
+	{
+		return n1;
+	}
+	else
+	{
+		return n2;
+	}
+}
+
+template <typename T>
+T morreu(T jogador)
+{
+	if (jogador.vida > 0)
+	{
+		return true; // vivo
+	}
+	else
+	{
+		return false; // morto
+	}
+}
+
+template <typename T>
+T morreu(T inimigo)
+{
+	if (inimigo.vida > 0)
+	{
+		return true; // vivo
+	}
+	else
+	{
+		return false; // morto
+	}
+}
+
+template <typename T>
+T ataque(T jogador,T inimigo)
+{
+	
+	for (int i = 1; ; i++) {
+		bool turno;
+		float rest;
+		rest = i % 2;
+		if (rest = 0)
+		{
+			turno = true;
+		}
+		else
+		{
+			turno = false;
+		}
+
+		switch (turno) 
+		{
+
+		case true:
+			std::cout << "   Turno do jogador  " << std::endl;
+			dado()
+
+			std::cout << jogador.nome << " atacou " << inimigo.nome << std::endl;
+
+		case false:
+
+		}
+	}
+}
+
+ int main()
+  {
+	 srand(rand(NULL));
+	 Jogador jogador;
+	 Inimigo inimigo;
+
+	 std::cout << "Seja bem vindo ao RPG" << std::endl;
+  }
