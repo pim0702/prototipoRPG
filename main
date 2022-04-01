@@ -6,13 +6,13 @@
 struct Arma {
     int danoMinimo = 2;
     int danoMaximo = 25;
-	string nome;
+	std::string nome;
 };
 
 // Inimigo – Que deverá ter um nome, vida, e uma arma.
 struct Inimigo {
     Arma aleatoria2;
-    string nome;
+	std::string nome;
     int vida = 100;
 };
 
@@ -26,7 +26,7 @@ struct Jogador {
 // Fase – Que deverá ter um nome e 5 inimigos.
 struct Fase {
     Inimigo Jose, Amilton, Juninnnn, Rodolfo, Cesar;
-    string nome;
+	std::string nome;
 };
 
 int maior(int n1, int n2) 
@@ -104,6 +104,5 @@ T ataque(T jogador,T inimigo)
 	 srand(rand(NULL));
 	 Jogador jogador;
 	 Inimigo inimigo;
-
 	 std::cout << "Seja bem vindo ao RPG" << std::endl;
   }
