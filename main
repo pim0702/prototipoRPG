@@ -26,62 +26,21 @@ struct fase {
 	inimigo inimigos[5];
 };
 
-void armas() {
-	struct arma p[5];
-	p[0].nome = "Canivete ";
-	p[0].danoMax = 5;
-	p[0].danoMin = 1;
 
-	p[1].nome = "Machado ";
-	p[1].danoMax = 10;
-	p[1].danoMin = 5;
 
-	p[2].nome = "Arco e flecha ";
-	p[2].danoMax = 15;
-	p[2].danoMin = 10;
+void inimigoAtacou(arma A, jogador) {
 
-	p[3].nome = "Pistola";
-	p[3].danoMax = 20;
-	p[3].danoMin = 15;
+	
 
-	p[4].nome = "Espada ";
-	p[4].danoMax = 30;
-	p[4].danoMin = 20;
-};
 
-void inimigoAtacou() {
 
-	struct inimigo p[5];
-	p[0].vida = 100;
-	p[0].nome = "Golem ";
-	p[0].arma = "Canivete ";
 
-	p[1].nome = "Arara ";
-	p[1].arma = "Machado ";
 
-	p[2].nome = "Bandido ";
-	p[2].arma = "Arco e flecha ";
-
-	p[3].nome = "Coveiro ";
-	p[3].arma = "Pistola ";
-
-	p[4].nome = "Pedreiro ";
-	p[4].arma = "Espada ";
-
-	cout << "O inimigo " << p[0].nome << "te atacou com um " << p[0].arma;
+	cout << "O inimigo " << I[0].nome << "te atacou com um " << A[0].arma;
 }
 
-void fases() {
-	struct fase p[3];
-	p[0].nome = "Deserto do Saara";
-	p[0].inimigos = inimigoAtacou();
 
-	p[1].nome = "California Beach";
-	p[1].inimigos = inimigoAtacou();
-
-	p[2].nome = "Monte Everest";
-	p[2].inimigos = inimigoAtacou();
-}
+	
 
 
 template <typename T>
@@ -111,50 +70,75 @@ T morreu(T inimigo)
 	}
 }
 
-template <typename T>
-T ataque(T jogador, T inimigo)
-{
 
-	for (int i = 1; ; i++) {
-		bool turno;
-		float rest;
-		rest = i % 2;
-		if (rest = 0)
-		{
-			turno = true;
-		}
-		else
-		{
-			turno = false;
-		}
-
-		switch (turno)
-		{
-
-		case true:
-			std::cout << "   Turno do jogador  " << std::endl;
-			dado()
-
-				std::cout << jogador.nome << " atacou " << inimigo.nome << std::endl;
-
-		case false:
-
-		}
-	}
-}
 
 int main() {
+	fase F;
+	F.nome = "Deserto do Saara";
+	F.inimigos = inimigoAtacou(arma A{});
 
-	int resposta, sim;
+	arma A[5];
+	A[0].nome = "Canivete ";
+	A[0].danoMax = 5;
+	A[0].danoMin = 1;
+
+	A[1].nome = "Machado ";
+	A[1].danoMax = 10;
+	A[1].danoMin = 5;
+
+	A[2].nome = "Arco e flecha ";
+	A[2].danoMax = 15;
+	A[2].danoMin = 10;
+
+	A[3].nome = "Pistola";
+	A[3].danoMax = 20;
+	A[3].danoMin = 15;
+
+	A[4].nome = "Espada ";
+	A[4].danoMax = 30;
+	A[4].danoMin = 20;
+
+	inimigo I[5];
+	I[0].vida = 100;
+	I[0].nome = "Golem";
+	I[0].arma = "Canivete";
+
+	I[1].nome = "Arara ";
+	I[1].arma = "Machado ";
+
+	I[2].nome = "Bandido ";
+	I[2].arma = "Arco e flecha ";
+
+	I[3].nome = "Coveiro ";
+	I[3].arma = "Pistola ";
+
+	I[4].nome = "Pedreiro ";
+	I[4].arma = "Espada ";
+
+	jogador debora;
+	debora.arma 
+
+	std::string resposta;
 	cout << "************************************************************************************";
 	cout << "Seja bem-vindo ao RPG Around The World, onde cada fase se passa num ponto turistico! " << endl;
 	cout << "Deseja iniciar o jogo? (sim) ou (nao) - digite em minusculo. " << endl;
 	cin >> resposta;
 
-	if (resposta = sim) {
-		inimigoAtacou();
-	}
-	else {
-		return 0;
-	}
+	
+		inimigoAtacou(arma A{})
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
